@@ -1,0 +1,307 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		89ED791E1DD2F9750090F375 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ED791D1DD2F9750090F375 /* AppDelegate.swift */; };
+		89ED79201DD2F9750090F375 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ED791F1DD2F9750090F375 /* ViewController.swift */; };
+		89ED79231DD2F9750090F375 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89ED79211DD2F9750090F375 /* Main.storyboard */; };
+		89ED79251DD2F9750090F375 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89ED79241DD2F9750090F375 /* Assets.xcassets */; };
+		89ED79281DD2F9750090F375 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89ED79261DD2F9750090F375 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		89ED791A1DD2F9750090F375 /* solarRecipes2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = solarRecipes2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		89ED791D1DD2F9750090F375 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		89ED791F1DD2F9750090F375 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		89ED79221DD2F9750090F375 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		89ED79241DD2F9750090F375 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		89ED79271DD2F9750090F375 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		89ED79291DD2F9750090F375 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		89ED79171DD2F9750090F375 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		89ED79111DD2F9750090F375 = {
+			isa = PBXGroup;
+			children = (
+				89ED791C1DD2F9750090F375 /* solarRecipes2 */,
+				89ED791B1DD2F9750090F375 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		89ED791B1DD2F9750090F375 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				89ED791A1DD2F9750090F375 /* solarRecipes2.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		89ED791C1DD2F9750090F375 /* solarRecipes2 */ = {
+			isa = PBXGroup;
+			children = (
+				89ED791D1DD2F9750090F375 /* AppDelegate.swift */,
+				89ED791F1DD2F9750090F375 /* ViewController.swift */,
+				89ED79211DD2F9750090F375 /* Main.storyboard */,
+				89ED79241DD2F9750090F375 /* Assets.xcassets */,
+				89ED79261DD2F9750090F375 /* LaunchScreen.storyboard */,
+				89ED79291DD2F9750090F375 /* Info.plist */,
+			);
+			path = solarRecipes2;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		89ED79191DD2F9750090F375 /* solarRecipes2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89ED792C1DD2F9750090F375 /* Build configuration list for PBXNativeTarget "solarRecipes2" */;
+			buildPhases = (
+				89ED79161DD2F9750090F375 /* Sources */,
+				89ED79171DD2F9750090F375 /* Frameworks */,
+				89ED79181DD2F9750090F375 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = solarRecipes2;
+			productName = solarRecipes2;
+			productReference = 89ED791A1DD2F9750090F375 /* solarRecipes2.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		89ED79121DD2F9750090F375 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Ahmed Moussa";
+				TargetAttributes = {
+					89ED79191DD2F9750090F375 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = C39656PGLG;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 89ED79151DD2F9750090F375 /* Build configuration list for PBXProject "solarRecipes2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 89ED79111DD2F9750090F375;
+			productRefGroup = 89ED791B1DD2F9750090F375 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				89ED79191DD2F9750090F375 /* solarRecipes2 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		89ED79181DD2F9750090F375 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89ED79281DD2F9750090F375 /* LaunchScreen.storyboard in Resources */,
+				89ED79251DD2F9750090F375 /* Assets.xcassets in Resources */,
+				89ED79231DD2F9750090F375 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		89ED79161DD2F9750090F375 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89ED79201DD2F9750090F375 /* ViewController.swift in Sources */,
+				89ED791E1DD2F9750090F375 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		89ED79211DD2F9750090F375 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				89ED79221DD2F9750090F375 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		89ED79261DD2F9750090F375 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				89ED79271DD2F9750090F375 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		89ED792A1DD2F9750090F375 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		89ED792B1DD2F9750090F375 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		89ED792D1DD2F9750090F375 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = C39656PGLG;
+				INFOPLIST_FILE = solarRecipes2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.anagamedfash5.solarRecipes2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		89ED792E1DD2F9750090F375 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = C39656PGLG;
+				INFOPLIST_FILE = solarRecipes2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.anagamedfash5.solarRecipes2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		89ED79151DD2F9750090F375 /* Build configuration list for PBXProject "solarRecipes2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89ED792A1DD2F9750090F375 /* Debug */,
+				89ED792B1DD2F9750090F375 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89ED792C1DD2F9750090F375 /* Build configuration list for PBXNativeTarget "solarRecipes2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89ED792D1DD2F9750090F375 /* Debug */,
+				89ED792E1DD2F9750090F375 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 89ED79121DD2F9750090F375 /* Project object */;
+}
