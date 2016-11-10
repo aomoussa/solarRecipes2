@@ -34,5 +34,59 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>AWS</key>
+    <dict>
+        <key>IdentityManager</key>
+        <dict>
+            <key>Default</key>
+            <dict/>
+        </dict>
+        <key>CredentialsProvider</key>
+        <dict>
+            <key>CognitoIdentity</key>
+            <dict>
+                <key>Default</key>
+                <dict>
+                    <key>PoolId</key>
+                    <string>us-east-1:0f8aff81-0c9c-41f4-bd2a-e9083e706388</string>
+                    <key>Region</key>
+                    <string>us-east-1</string>
+                </dict>
+            </dict>
+        </dict>
+        <key>MobileHub</key>
+        <dict>
+            <key>ProjectClientId</key>
+            <string>MobileHub 265c0248-1255-45b4-8da0-fd6fe01c701b aws-my-sample-app-ios-swift-v0.5</string>
+        </dict>
+        <key>DynamoDBObjectMapper</key>
+        <dict>
+            <key>Default</key>
+            <dict>
+                <key>Region</key>
+                <string>us-east-1</string>
+            </dict>
+        </dict>
+    </dict>
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>fb1664793960498463</string>
+            </array>
+        </dict>
+    </array>
+    <key>FacebookAppID</key>
+    <string>1664793960498463</string>
+    <key>FacebookDisplayName</key>
+    <string>SolaRecipes</string>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>fbapi</string>
+        <string>fb-messenger-api</string>
+        <string>fbauth2</string>
+        <string>fbshareextension</string>
+    </array>
 </dict>
 </plist>
