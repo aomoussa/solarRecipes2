@@ -17,6 +17,8 @@ class homeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     var recipeCreatorPPDownloadedAtIndex = [Bool]()
     var recies = [recipe]()
     
+    var searchMode = false
+    
     private var manager: AWSUserFileManager!
     
     override func viewDidLoad() {
@@ -34,6 +36,28 @@ class homeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    //---------- ----------- ---------- search mode activation and deactivation ---------- ---------- starts
+    @IBAction func searchClicked(_ sender: UIButton) {
+        if(searchMode){
+            deactivateSearchMode()
+        }
+        else{
+            activateSearchMode()
+        }
+    }
+    func activateSearchMode(){
+        let screenHeight = self.view.frame.height
+        let screenWidth = self.view.frame.width
+        self.recipeCollectionView.frame = CGRect(x: 0, y: screenHeight*0.5, width: screenWidth, height: screenHeight*0.4)
+        searchMode = true
+    }
+    func deactivateSearchMode(){
+        let screenHeight = self.view.frame.height
+        let screenWidth = self.view.frame.width
+        self.recipeCollectionView.frame = CGRect(x: 0, y: screenHeight*0.1, width: screenWidth, height: screenHeight*0.8)
+        searchMode = false
+    }
+    //---------- ----------- ---------- search mode activation and deactivation ---------- ---------- ends
     
     //----------------------------- COLLECTIONVIEW CODE -------------------------------- starts
     
@@ -76,6 +100,7 @@ class homeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         populatePicturesAtIndex(i: indexPath.row)
     }
     //----------------------------- COLLECTIONVIEW CODE -------------------------------- ends
+    
     func populatePicturesAtIndex(i: Int){
         
         if(recies[i].picures.count == 0){
@@ -103,7 +128,9 @@ class homeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                     let newRecie = recipe(recip: item)
                     self.recies.append(newRecie)
                     self.recipeCreatorPPDownloadedAtIndex.append(false)
-                    self.recipeCollectionView.reloadData()
+                    DispatchQueue.main.async(execute: {
+                        self.recipeCollectionView.reloadData()
+                    })
                     print(self.recies)
                 }
             }
