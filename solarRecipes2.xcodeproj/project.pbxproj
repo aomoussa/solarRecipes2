@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8946B4511DD86589001329D7 /* userSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8946B4501DD86589001329D7 /* userSettingsViewController.swift */; };
+		8946B4531DD86F14001329D7 /* recipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8946B4521DD86F14001329D7 /* recipeDetailsViewController.swift */; };
 		899895D71DD3125900406403 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 899895D61DD3125900406403 /* libz.tbd */; };
 		899895D91DD3127300406403 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 899895D81DD3127300406403 /* libsqlite3.tbd */; };
 		899895E81DD3171700406403 /* AWSMobileClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899895E21DD3171700406403 /* AWSMobileClient.swift */; };
@@ -51,6 +53,8 @@
 
 /* Begin PBXFileReference section */
 		02F0DD80BDC33EC80C47A8E9 /* Pods-solarRecipes2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-solarRecipes2.release.xcconfig"; path = "Pods/Target Support Files/Pods-solarRecipes2/Pods-solarRecipes2.release.xcconfig"; sourceTree = "<group>"; };
+		8946B4501DD86589001329D7 /* userSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userSettingsViewController.swift; sourceTree = "<group>"; };
+		8946B4521DD86F14001329D7 /* recipeDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = recipeDetailsViewController.swift; sourceTree = "<group>"; };
 		899895D61DD3125900406403 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		899895D81DD3127300406403 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		899895E21DD3171700406403 /* AWSMobileClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSMobileClient.swift; sourceTree = "<group>"; };
@@ -161,6 +165,7 @@
 				89ED791D1DD2F9750090F375 /* AppDelegate.swift */,
 				89ED791F1DD2F9750090F375 /* loginViewController.swift */,
 				89ED79211DD2F9750090F375 /* Main.storyboard */,
+				8946B4521DD86F14001329D7 /* recipeDetailsViewController.swift */,
 				899895FA1DD364A400406403 /* recipeCollectionViewCell.swift */,
 				89ED79311DD2FB6D0090F375 /* DBQueryHandler.swift */,
 				89ED79331DD2FB7F0090F375 /* imageDownloadHandler.swift */,
@@ -169,6 +174,7 @@
 				89ED79241DD2F9750090F375 /* Assets.xcassets */,
 				89ED79261DD2F9750090F375 /* LaunchScreen.storyboard */,
 				89ED79291DD2F9750090F375 /* Info.plist */,
+				8946B4501DD86589001329D7 /* userSettingsViewController.swift */,
 			);
 			path = solarRecipes2;
 			sourceTree = "<group>";
@@ -323,11 +329,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				899895EA1DD3171700406403 /* Oven.swift in Sources */,
+				8946B4511DD86589001329D7 /* userSettingsViewController.swift in Sources */,
 				89ED79201DD2F9750090F375 /* loginViewController.swift in Sources */,
 				89ED79321DD2FB6D0090F375 /* DBQueryHandler.swift in Sources */,
 				899895F91DD31D0A00406403 /* recipe.swift in Sources */,
 				899895FB1DD364A400406403 /* recipeCollectionViewCell.swift in Sources */,
 				899895E81DD3171700406403 /* AWSMobileClient.swift in Sources */,
+				8946B4531DD86F14001329D7 /* recipeDetailsViewController.swift in Sources */,
 				89ED79341DD2FB7F0090F375 /* imageDownloadHandler.swift in Sources */,
 				89ED79301DD2FA900090F375 /* homeViewController.swift in Sources */,
 				89ED791E1DD2F9750090F375 /* AppDelegate.swift in Sources */,
