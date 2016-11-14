@@ -318,6 +318,7 @@
                         <outlet property="addOvenButton" destination="ynO-mG-j4n" id="YwL-Yj-1pU"/>
                         <outlet property="addRecipeButton" destination="u4n-Sc-6ku" id="BYy-2T-kPz"/>
                         <outlet property="recipeCollectionView" destination="S9M-4A-XsM" id="y3l-CV-1TP"/>
+                        <segue destination="pHj-dC-kaE" kind="show" identifier="toRecipeDetails" id="Zpy-FA-He7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zwC-Hw-fE1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -433,6 +434,9 @@
                                 <state key="normal" title="Ingredients">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="ingredientsClicked:" destination="pHj-dC-kaE" eventType="touchUpInside" id="nE3-4K-KGQ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RCY-qK-ZvP">
                                 <color key="backgroundColor" red="1" green="0.33733987137411992" blue="0.34291517966807428" alpha="1" colorSpace="calibratedRGB"/>
@@ -440,42 +444,58 @@
                                 <state key="normal" title="Directions">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="directionsClicked:" destination="pHj-dC-kaE" eventType="touchUpInside" id="gIX-Oz-kvH"/>
+                                </connections>
                             </button>
+                            <view alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oRr-dT-xVh">
+                                <frame key="frameInset" minY="198" width="375" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="recipe title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oT6-te-1Sp">
-                                <frame key="frameInset" minX="64" minY="178" width="277" height="21"/>
+                                <frame key="frameInset" minX="16" minY="198" width="343" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="creator name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Kx-Wz-ZO1">
-                                <frame key="frameInset" minX="64" minY="220" width="102" height="21"/>
+                                <frame key="frameInset" minX="16" minY="227" width="322" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="difficulty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O2i-Kz-T8K">
-                                <frame key="frameInset" minX="24" minY="255" width="67" height="21"/>
+                                <frame key="frameInset" minX="16" minY="264" width="67" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTi-03-rJb">
-                                <frame key="frameInset" minX="157" minY="255" width="64" height="21"/>
+                                <frame key="frameInset" minX="155" minY="264" width="64" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="temp." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMB-q7-TJy">
-                                <frame key="frameInset" minX="285" minY="255" width="44" height="21"/>
+                                <frame key="frameInset" minX="294" minY="264" width="44" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P84-rQ-vbJ">
+                                <frame key="frameInset" minX="22" minY="10" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="WNw-gy-jKK" kind="presentation" id="eq4-US-Rkx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -494,10 +514,21 @@
                             <constraint firstItem="cVT-D7-ac4" firstAttribute="centerX" secondItem="ETT-2a-llg" secondAttribute="centerX" id="xl7-5Z-g8b"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="creatorNameLabel" destination="9Kx-Wz-ZO1" id="Pet-D2-yaM"/>
+                        <outlet property="difficultyLabel" destination="O2i-Kz-T8K" id="CUk-zx-1y4"/>
+                        <outlet property="directionsButton" destination="RCY-qK-ZvP" id="z8C-wV-FLb"/>
+                        <outlet property="durationLabel" destination="rTi-03-rJb" id="BqE-tX-kKk"/>
+                        <outlet property="ingredientsButton" destination="DbP-Cz-NWh" id="Otb-HX-a7E"/>
+                        <outlet property="ingredientsTableView" destination="cVT-D7-ac4" id="3Pf-5S-fve"/>
+                        <outlet property="recipeImageView" destination="XgO-Bi-cXM" id="rRf-ae-fpr"/>
+                        <outlet property="recipeTitleLabel" destination="oT6-te-1Sp" id="usH-Ch-Uip"/>
+                        <outlet property="temperatureLabel" destination="EMB-q7-TJy" id="CIi-NK-iJx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8dz-6Y-UEF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="865" y="809"/>
+            <point key="canvasLocation" x="869.60000000000002" y="893.70314842578716"/>
         </scene>
         <!--User Settings View Controller-->
         <scene sceneID="mXM-Ij-ORc">
@@ -677,7 +708,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="eq4-US-Rkx"/>
         <segue reference="iEZ-U6-Mf8"/>
-        <segue reference="Njc-KI-9pM"/>
     </inferredMetricsTieBreakers>
 </document>

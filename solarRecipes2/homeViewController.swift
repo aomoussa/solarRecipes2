@@ -39,39 +39,7 @@ class homeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         getRecipeData()
     }
-    func addRefresherToCollectionView(){
-        let refresher = UIRefreshControl()
-        refresher.addTarget(self, action: #selector(homeViewController.refresherReload(_:)), for: UIControlEvents.valueChanged)
-        recipeCollectionView.addSubview(refresher)
-    }
-    func refresherReload(_ sender: UIRefreshControl){
-        self.recies.removeAll()
-        let completionHandler = {(response: AWSDynamoDBPaginatedOutput?, error: Error?) -> Void in
-            if let error = error {
-                let errorMessage = "Failed to retrieve items. \(error.localizedDescription)"
-                self.showAlertWithTitle(title: "Error", message: errorMessage)
-            }
-            else if response!.items.count == 0 {
-                self.showAlertWithTitle(title: "Not Found", message: "No items match your criteria. Insert more sample data and try again.")
-            }
-            else {
-                //it all worked out:
-                let paginatedOutput = response as? AWSDynamoDBPaginatedOutput!
-                
-                
-                for item in paginatedOutput?.items as! [DBRecipe] {
-                    let newRecie = recipe(recip: item)
-                    self.recies.append(newRecie)
-                    print(self.recies)
-                }
-                DispatchQueue.main.async(execute: {
-                    self.recipeCollectionView.reloadData()
-                    sender.endRefreshing()
-                })
-            }
-        }
-        glblQueryHandler.queryRecipeData(completionHandler: completionHandler)
-    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -141,8 +109,10 @@ class homeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         populatePicturesAtIndex(i: indexPath.row)
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "toRecipeDetails", sender: recies[indexPath.row])
+    }
     //----------------------------- COLLECTIONVIEW CODE -------------------------------- ends
-    
     func populatePicturesAtIndex(i: Int){
         
         if(i < recies.count && recies[i].picures.count == 0){
@@ -150,6 +120,39 @@ class homeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             getPictureFromDirectory(prefix: "public/\((recies[i].recie?._name!)!)/", i: i)
         }
         
+    }
+    func addRefresherToCollectionView(){
+        let refresher = UIRefreshControl()
+        refresher.addTarget(self, action: #selector(homeViewController.refresherReload(_:)), for: UIControlEvents.valueChanged)
+        recipeCollectionView.addSubview(refresher)
+    }
+    func refresherReload(_ sender: UIRefreshControl){
+        self.recies.removeAll()
+        let completionHandler = {(response: AWSDynamoDBPaginatedOutput?, error: Error?) -> Void in
+            if let error = error {
+                let errorMessage = "Failed to retrieve items. \(error.localizedDescription)"
+                self.showAlertWithTitle(title: "Error", message: errorMessage)
+            }
+            else if response!.items.count == 0 {
+                self.showAlertWithTitle(title: "Not Found", message: "No items match your criteria. Insert more sample data and try again.")
+            }
+            else {
+                //it all worked out:
+                let paginatedOutput = response as? AWSDynamoDBPaginatedOutput!
+                
+                
+                for item in paginatedOutput?.items as! [DBRecipe] {
+                    let newRecie = recipe(recip: item)
+                    self.recies.append(newRecie)
+                    print(self.recies)
+                }
+                DispatchQueue.main.async(execute: {
+                    self.recipeCollectionView.reloadData()
+                    sender.endRefreshing()
+                })
+            }
+        }
+        glblQueryHandler.queryRecipeData(completionHandler: completionHandler)
     }
     func getRecipeData(){
         self.recies.removeAll()
@@ -161,9 +164,11 @@ class homeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             if let error = error {
                 let errorMessage = "Failed to retrieve items. \(error.localizedDescription)"
                 self.showAlertWithTitle(title: "Error", message: errorMessage)
+                x.removeFromSuperview()
             }
             else if response!.items.count == 0 {
                 self.showAlertWithTitle(title: "Not Found", message: "No items match your criteria. Insert more sample data and try again.")
+                x.removeFromSuperview()
             }
             else {
                 //it all worked out:
@@ -202,6 +207,13 @@ class homeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         }
         glblImageDownloadHandler.getPicture(prefix: prefix, imgCompletionHandler: imgCompletionHandler)
         
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "toRecipeDetails"){
+            let destVC = segue.destination as! recipeDetailsViewController
+            destVC.recie1 = (sender as? recipe)!
+            
+        }
     }
     func showAlertWithTitle(title: String, message: String) {
         let alertController: UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .alert)

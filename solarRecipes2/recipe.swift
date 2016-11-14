@@ -30,5 +30,16 @@ class recipe {
         recie = recip
     }
     
+    init(){
+        recie?._id = ""
+        recie?._name = ""
+        recie?._instructions = ""
+        recie?._description = ""
+        recie?._temperature = 0 as NSNumber
+        recie?._duration = 0 as NSNumber
+        recie?._creatorFBID = ""
+        recie?._creatorName = ""
+        recie?._numberOfPictures = 0 as NSNumber
+    }
     
 }
