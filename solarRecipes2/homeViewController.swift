@@ -127,7 +127,8 @@ class homeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         recipeCollectionView.addSubview(refresher)
     }
     func refresherReload(_ sender: UIRefreshControl){
-        self.recies.removeAll()
+        var tempRecies = [recipe]()
+        //self.recies.removeAll()
         let completionHandler = {(response: AWSDynamoDBPaginatedOutput?, error: Error?) -> Void in
             if let error = error {
                 let errorMessage = "Failed to retrieve items. \(error.localizedDescription)"
@@ -143,16 +144,27 @@ class homeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                 
                 for item in paginatedOutput?.items as! [DBRecipe] {
                     let newRecie = recipe(recip: item)
-                    self.recies.append(newRecie)
-                    print(self.recies)
+                    tempRecies.append(newRecie)
+                    print(tempRecies)
                 }
                 DispatchQueue.main.async(execute: {
+                    self.recies = tempRecies
                     self.recipeCollectionView.reloadData()
                     sender.endRefreshing()
                 })
             }
         }
         glblQueryHandler.queryRecipeData(completionHandler: completionHandler)
+        /*
+        self.recipeCollectionView.performBatchUpdates({
+            glblQueryHandler.queryRecipeData(completionHandler: completionHandler)
+            }) { (completed) in
+                DispatchQueue.main.async(execute: {
+                    self.recipeCollectionView.reloadData()
+                    sender.endRefreshing()
+                })
+        }*/
+        
     }
     func getRecipeData(){
         self.recies.removeAll()
